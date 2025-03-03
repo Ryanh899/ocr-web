@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         {/* Import Montserrat with weights 300 and 400 (and 700 if needed) */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;350;400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;350;400;500;550;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </header>
         <div
           className="bg-white flex items-center justify-between"
-          style={{ paddingTop: '4px', paddingBottom: '15px', paddingLeft: '40px', paddingRight: '10px' }}
+          style={{ paddingTop: '10px', paddingBottom: '10px', paddingLeft: '40px', paddingRight: '10px' }}
         >
           <nav>
             <ul
@@ -188,12 +188,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
         </div>
         {/* page start */}
-        <main className="container mx-auto px-4 py-8">
+        <main>
           {children}
         </main>
-        <footer className="bg-gray-200 py-4 mt-8">
-          <div className="container mx-auto text-center text-gray-600">
-            © {new Date().getFullYear()} Senior Care Center. All rights reserved.
+        {/* footer start */}
+        <footer className="bg-[#5D4037] text-white text-center p-4">
+          <div className="container mx-auto ">
+            © {new Date().getFullYear()} Our Countryside Resort. All rights reserved.
           </div>
         </footer>
       </body>
