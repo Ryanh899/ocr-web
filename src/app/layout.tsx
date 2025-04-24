@@ -1,200 +1,76 @@
-// src/app/layout.tsx
+// layout.tsx
 import './globals.css'
+import { Inter } from 'next/font/google'
 import Link from 'next/link'
-import { ReactNode } from 'react'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Our Countryside Resort - Senior Memory Care',
-  description: 'Professional, welcoming memory care for seniors.',
+  title: 'Our Countryside Resort',
+  description: 'Compassionate Memory Care in the Countryside',
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        {/* Import Montserrat with weights 300 and 400 (and 700 if needed) */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;350;400;500;550;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
+      <body className={`${inter.className} bg-white text-[#3b5d7d] font-sans`}>
+        {/* Header */}
+        <header className="bg-white bg-opacity-90 backdrop-blur-sm z-50 sticky top-0 shadow-sm">
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center justify-between px-6 py-4 pr-0">
+            <Link href="/" className="text-center md:text-left">
+              <div>
+                <h1 className="text-3xl font-semibold leading-tight text-[#3b5d7d]" style={{ fontFamily: 'Montserrat' }}>
+                  Our Countryside Resort
+                </h1>
+                <p className="text-sm text-[#7a7a7a]" style={{ fontFamily: 'Montserrat' }}>
+                  Memory Care & Assisted Living
+                </p>
+              </div>
+            </Link>
 
-      <body className="font-sans">
-        <header style={{ background: '#f8f8f8' }} className="text-black py-3 px-4">
-          <div className="flex items-center justify-between px-4">
-            <h1 style={{ fontFamily: 'cursive', fontSize: '2rem', color: '#454546' }}>
-              Our Countryside Resort
-            </h1>
-            <nav>
-              <ul
-                style={{ fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif' }}
-                className="flex space-x-4 text-black"
-              >
-                <li><Link className="hover:underline" href="/career">Careers</Link></li>
-                <li><Link className="hover:underline" href="/payment">Payments</Link></li>
-                <li><Link className="hover:underline" href="/contact">Contact</Link></li>
-              </ul>
+            <nav
+              className="mt-4 md:mt-0 flex flex-wrap justify-center md:justify-end gap-4 items-center text-[#3b5d7d] text-md"
+              style={{ fontFamily: 'Montserrat' }}
+            >
+              {[
+                { label: 'Our Services', href: '/services' },
+                { label: 'Getting Started', href: '/getting_started' },
+                { label: 'Lifestyle', href: '/lifestyle' },
+                { label: 'About Us', href: '/about' },
+                { label: 'Contact', href: '/contact' },
+              ].map((item, idx) => (
+                <Link
+                  key={idx}
+                  href={item.href}
+                  className="hover:underline hover:underline-offset-4 transition-all duration-200"
+                >
+                  {item.label}
+                </Link>
+              ))}
+
+              <Link href="/schedule-tour">
+                <button className="bg-[#3b5d7d] text-white px-4 py-2 rounded hover:brightness-110 transition duration-200">
+                  Schedule a Tour
+                </button>
+              </Link>
             </nav>
           </div>
         </header>
-        <div
-          className="bg-white flex items-center justify-between"
-          style={{ paddingTop: '10px', paddingBottom: '10px', paddingLeft: '40px', paddingRight: '10px' }}
-        >
-          <nav>
-            <ul
-              style={{ fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif' }}
-              className="flex space-x-4 text-black"
-            >
-              {/* Lifestyle Dropdown */}
-              <li className="relative group">
-                <Link href="/about" className="inline-block py-2 hover:underline">
-                  Lifestyle <span className="ml-1 text-xs" style={{ color: '#454546' }}>▼</span>
-                </Link>
-                <ul className="absolute left-0 mt-2 w-40 bg-white shadow-md border rounded hidden group-hover:block text-s">
-                  <li>
-                    <Link href="/about/lifestyle" className="block px-4 py-2 hover:bg-gray-100">
-                      Our Lifestyle
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/about/services" className="block px-4 py-2 hover:bg-gray-100">
-                      Services and Amenities
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/about/cuisine" className="block px-4 py-2 hover:bg-gray-100">
-                      Cuisine
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/about/ownership" className="block px-4 py-2 hover:bg-gray-100">
-                      Ownership
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/about/staff" className="block px-4 py-2 hover:bg-gray-100">
-                      Our Staff
-                    </Link>
-                  </li>
-                </ul>
-              </li>
 
-              {/* Care Services Dropdown */}
-              <li className="relative group">
-                <Link href="/care_services" className="inline-block py-2 hover:underline">
-                  Care Services <span className="ml-1 text-xs" >▼</span>
-                </Link>
-                <ul className="absolute left-0 mt-2 w-40 bg-white shadow-md border rounded hidden group-hover:block text-s">
-                  <li>
-                    <Link href="/care_services/memorycare" className="block px-4 py-2 hover:bg-gray-100">
-                      Memory Care
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/care_services/shortterm" className="block px-4 py-2 hover:bg-gray-100">
-                      Short Term Stays
-                    </Link>
-                  </li>
-                </ul>
-              </li>
+        {/* Page content */}
+        <main className="relative z-10">{children}</main>
 
-              {/* Making a Plan Dropdown */}
-              <li className="relative group">
-                <Link href="/planning" className="inline-block py-2 hover:underline">
-                  Making a Plan <span className="ml-1 text-xs" style={{ color: '#454546' }}>▼</span>
-                </Link>
-                <ul className="absolute left-0 mt-2 w-40 bg-white shadow-md border rounded hidden group-hover:block text-s">
-                  <li>
-                    <Link href="/planning/financial" className="block px-4 py-2 hover:bg-gray-100">
-                      Financial Planning
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/planning/movingorstaying" className="block px-4 py-2 hover:bg-gray-100">
-                      Moving vs Staying
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/planning/compare" className="block px-4 py-2 hover:bg-gray-100">
-                      Compare Options
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/planning/disasterprepare" className="block px-4 py-2 hover:bg-gray-100">
-                      Disaster Preparedness
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/planning/faqs" className="block px-4 py-2 hover:bg-gray-100">
-                      FAQs
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-
-              {/* Financial Help Dropdown */}
-              <li className="relative group">
-                <Link href="/caregivers" className="inline-block py-2 hover:underline">
-                  Caregiver's Guide <span className="ml-1 text-xs" style={{ color: '#454546' }}>▼</span>
-                </Link>
-                <ul className="absolute left-0 mt-2 w-40 bg-white shadow-md border rounded hidden group-hover:block text-s">
-                  <li>
-                    <Link href="/caregivers/seniorhealth" className="block px-4 py-2 hover:bg-gray-100">
-                      Senior Aging and Health
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/caregivers/familydynamics" className="block px-4 py-2 hover:bg-gray-100">
-                      Family Dynamics
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/caregivers/decision" className="block px-4 py-2 hover:bg-gray-100">
-                      Making the Decision
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/caregivers/financialhelp" className="block px-4 py-2 hover:bg-gray-100">
-                      Financials
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/caregivers/diseaseinfo" className="block px-4 py-2 hover:bg-gray-100">
-                      Alzheimer's and Dementia
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/caregivers/wheretobegin" className="block px-4 py-2 hover:bg-gray-100">
-                      Where to Begin
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-          <div>
-            <Link href="/contact-form">
-              <button
-                className="px-4 py-2 rounded border border-gray-300 bg-[#bad535] hover:bg-[#ffff] text-[#454546] font-normal"
-                style={{
-                  fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif',
-                  fontWeight: 400,
-                }}
-              >
-                Schedule a Visit
-              </button>
-            </Link>
-          </div>
-        </div>
-        {/* page start */}
-        <main>
-          {children}
-        </main>
-        {/* footer start */}
-        <footer className="bg-[#5D4037] text-white text-center p-4">
-          <div className="container mx-auto ">
-            © {new Date().getFullYear()} Our Countryside Resort. All rights reserved.
+        {/* Footer */}
+        <footer className="bg-[#f0f4f8] text-[#3b5d7d] py-10">
+          <div className="max-w-6xl mx-auto px-6 text-center space-y-4" style={{ fontFamily: 'Montserrat' }}>
+            <p>© {new Date().getFullYear()} Our Countryside Resort. All rights reserved.</p>
+            <p className="text-sm text-[#7a7a7a]">Compassionate Assisted Living in the Countryside</p>
           </div>
         </footer>
       </body>

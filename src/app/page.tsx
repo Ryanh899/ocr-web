@@ -1,252 +1,124 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-// src/app/page.tsx
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#f8f8f8] text-gray-800 font-sans">
-
+    <div className="min-h-screen bg-white text-[#3b5d7d] font-sans">
       {/* Hero Section */}
-      <main className="max-w-7xl mx-auto py-10">
-        <section
-          className="flex flex-col md:flex-row items-center rounded-lg shadow p-6"
-          style={{ backgroundColor: '#454546', color: '#fff', paddingLeft: '30px' }}
-        >
-          <div className="md:w-1/2">
-            {/* Reduced margin for h1 */}
-            <h1
-              className="text-2xl text-[#fff] mb-2"
-              style={{
-                fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif',
-                fontWeight: '300',
-                paddingBottom: '0px'
-              }}
-            >
-              Senior Living & Memory Care
+      <section className="w-full bg-cover bg-center min-h-[55vh]" style={{ backgroundImage: 'url(/frontview-splash2.jpeg)' }}>
+        <div className="bg-[#ffffffcc] backdrop-blur-xs p-25 pt-35 min-h-[55vh] ">
+          <div className="max-w-5xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl mb-4" style={{ fontFamily: 'Montserrat' }}>
+              Welcome to Our Countryside Resort Memory Care
             </h1>
-            {/* Increased margin for "Join Our Community" */}
-            <p
-              className="text-3xl text-[#fff] mb-8"
-              style={{
-                fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif',
-                fontWeight: '500',
-                paddingTop: '0px'
-              }}
-            >
-              Join Our Community
+            <p className="text-xl md:text-2xl font-small mb-6" style={{ fontFamily: 'Montserrat' }}>
+              Compassionate Assisted Living Designed for Dignity
             </p>
-            {/* Increased margin for the next paragraph */}
-            <p
-              className="text-md mb-10"
-              style={{
-                fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif',
-                fontWeight: '400'
-              }}
-            >
-              Chef Prepared Meals, 24-hour Support, and 20 years of experience make us the best place for your loved ones.
+            <p className="text-md md:text-lg font-normal mb-10 text-[#7a7a7a]" style={{ fontFamily: 'Montserrat' }}>
+              Experience a peaceful environment, personalized care, and 20+ years of trusted service.
             </p>
-            <div>
-              <Link href="/contact-form">
-                <button
-                  className="px-4 py-2 rounded border bg-[#bad535] hover:bg-[#ffff] text-[#454546] font-normal"
-                  style={{
-                    fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif',
-                    fontWeight: 400,
-                    fontSize: '20px',
-                    width: '50%',
-                    paddingTop: '15px',
-                    paddingBottom: '15px'
-                  }}
-                >
-                  Schedule a Tour Today!
+            <div className="flex justify-center gap-4 flex-wrap">
+              <Link href="/schedule-tour">
+                <button className="bg-[#3b5d7d] text-white px-6 py-3 rounded hover:bg-[#2d4a65] transition">
+                  Schedule a Tour
+                </button>   
+              </Link>
+              <Link href="/contact">
+                <button className="bg-[#b85042] text-white px-6 py-3 rounded hover:bg-[#a33f35] transition">
+                  Contact Us
                 </button>
               </Link>
             </div>
           </div>
-          <div className="md:w-1/2 mt-6 md:mt-0 md:pl-0">
-            <img
-              src="/landing1.jpg"
-              alt="A warm, welcoming view of the senior care facility with smiling residents and caring staff"
-              className="w-full rounded-lg shadow-lg"
-            />
-          </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Quality Care Section */}
-        <section className="mt-12">
-          <div className="bg-[#f4f4f4] rounded-lg shadow-lg p-6">
-            <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6">
-              {/* Image Block */}
-              <div className="md:w-1/2">
-                <img
-                  src="/qualitycare.webp"
-                  alt="A beautifully plated, chef-prepared meal served in the dining area"
-                  className="w-full rounded-lg shadow-lg"
-                />
-              </div>
-              {/* Text Block */}
-              <div className="md:w-1/2">
-                <div className="mb-6">
-                  <h2
-                    style={{
-                      color: '#454546',
-                      fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif',
-                      fontWeight: 600,
-                    }}
-                    className="text-3xl mb-4"
-                  >
-                    Quality Care
-                  </h2>
-                  <p
-                    style={{
-                      color: '#454546',
-                      fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif',
-                      fontWeight: 400,
-                    }}
-                    className="text-lg"
-                  >
-                    Our personalized care plans include health monitoring, medication management, engaging activities, social interaction, and 24-hour care to ensure safety and comfort.
-                  </p>
-                </div>
-                <Link href="/about">
-                <button style={{
-                    fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif',
-                    fontWeight: 400,
-                    border: '1px, #454546 solid'
-                  }} className="mt-4 px-4 py-2 rounded hover:bg-[#454546] hover:text-[#f4f4f4] transition">
-                    Learn More
-                  </button>
-                </Link>
-              </div>
+      {/* About Our Community */}
+      <section className="py-16 px-6 bg-[#f9f9f9]">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-3xl font-semibold mb-4" style={{ fontFamily: 'Montserrat' }}>
+              Why Families Choose Us
+            </h2>
+            <ul className="space-y-4 text-lg text-[#555]">
+              <li>✔ Personalized memory care programs</li>
+              <li>✔ Chef-prepared meals daily</li>
+              <li>✔ 24/7 caring and certified staff</li>
+              <li>✔ Engaging daily activities for cognitive wellness</li>
+              <li>✔ Comfortable, home-like environment</li>
+            </ul>
+          </div>
+          <div>
+            <div className="bg-white p-6 rounded shadow">
+              <h3 className="text-2xl font-medium mb-3" style={{ fontFamily: 'Montserrat' }}>
+                "Our Countryside Resort feels like home. The care, love, and warmth are unmatched."
+              </h3>
+              <p className="text-md text-[#7a7a7a] italic">– A Grateful Family Member</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Events & Activities Section */}
-        <section className="mt-12">
-          <div className="bg-[#f4f4f4] rounded-lg shadow-lg p-6">
-            <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6">
-              {/* Text Block */}
-              <div className="md:w-1/2">
-                <div className="mb-6">
-                  <h2
-                    style={{
-                      color: '#454546',
-                      fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif',
-                      fontWeight: 600,
-                    }}
-                    className="text-3xl mb-4"
-                  >
-                    Events &amp; Activities
-                  </h2>
-                  <p
-                    style={{
-                      color: '#454546',
-                      fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif',
-                      fontWeight: 400,
-                    }}
-                    className="text-lg"
-                  >
-                    Our dynamic calendar features art, music, and gentle exercise classes tailored for memory care residents. These engaging activities spark joy, stimulate memories, and build a close-knit community.
-                  </p>
-                </div>
-                <Link href="/activities-calendar">
-                <button style={{
-                    fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif',
-                    fontWeight: 400,
-                    border: '1px, #454546 solid'
-                  }} className="mt-4 px-4 py-2 rounded hover:bg-[#454546] hover:text-[#f4f4f4] transition">
-                    View Calendar
-                  </button>
-                </Link>
-              </div>
-              {/* Image Block */}
-              <div className="md:w-1/2">
-                <img
-                  src="/activities.jpg"
-                  alt="Residents participating in a lively community event at the facility"
-                  className="w-full rounded-lg shadow-lg"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Services Section */}
-        <section className="mt-12">
-          <div className="bg-[#f4f4f4] rounded-lg shadow-lg p-6">
-            <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6">
-              {/* Image Block */}
-              <div className="md:w-1/2">
-                <img
-                  src="/senioreating.jpg"
-                  alt="Friendly staff assisting a resident with daily activities in a warm environment"
-                  className="w-full rounded-lg shadow-lg"
-                />
-              </div>
-              {/* Text Block */}
-              <div className="md:w-1/2">
-                <div className="mb-6">
-                  <h2
-                    style={{
-                      color: '#454546',
-                      fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif',
-                      fontWeight: 600,
-                    }}
-                    className="text-3xl mb-4"
-                  >
-                    Our Services
-                  </h2>
-                  <p
-                    style={{
-                      color: '#454546',
-                      fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif',
-                      fontWeight: 400,
-                    }}
-                    className="text-lg"
-                  >
-                    We provide personalized memory care, flexible short-term stays, and compassionate hospice services.
-                    Our multidisciplinary approach ensures every resident receives dignified, exceptional care in a warm, home-like setting.
-                  </p>
-                </div>
-                <Link href="/services">
-                  <button style={{
-                    fontFamily: '"Montserrat", "Helvetica Neue", Arial, sans-serif',
-                    fontWeight: 400,
-                    border: '1px, #454546 solid'
-                  }} className="mt-4 px-4 py-2 rounded hover:bg-[#454546] hover:text-[#f4f4f4] transition">
-                    Explore Services
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-
-        {/* Final Call to Action Section */}
-        <section className="mt-12 text-center">
-          <h2 className="text-3xl font-bold text-[#5D4037] mb-4">
-            Ready to Experience the Difference?
+      {/* Our Services */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold mb-10" style={{ fontFamily: 'Montserrat' }}>
+            Our Services
           </h2>
-          <p className="text-lg mb-6">
-            Contact us today to schedule a tour or learn more about our exceptional memory care programs.
-          </p>
-          <div className="space-x-6">
-            <a
-              href="/schedule-tour"
-              className="bg-[#5D4037] text-white px-6 py-3 rounded hover:bg-opacity-90 transition"
-            >
-              Schedule a Tour
-            </a>
-            <a
-              href="/contact"
-              className="bg-[#5D4037] text-white px-6 py-3 rounded hover:bg-opacity-90 transition"
-            >
-              Contact Us
-            </a>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { title: 'Memory Care', desc: 'Specialized programs tailored for each resident’s needs and preferences.' },
+              { title: 'Respite Care', desc: 'Short-term stays with full access to services and amenities.' },
+              { title: 'Hospice Support', desc: 'Compassionate, end-of-life care with dignity and respect.' },
+            ].map((service, index) => (
+              <div key={index} className="bg-[#f9f9f9] p-6 rounded shadow hover:shadow-lg transition">
+                <h3 className="text-xl font-semibold mb-3 text-[#3b5d7d]" style={{ fontFamily: 'Montserrat' }}>
+                  {service.title}
+                </h3>
+                <p className="text-md text-[#7a7a7a]" style={{ fontFamily: 'Montserrat' }}>{service.desc}</p>
+              </div>
+            ))}
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+
+      {/* Engagement Section (optional image) */}
+      <section className="py-16 px-6 bg-[#f0f4f8]">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold mb-6" style={{ fontFamily: 'Montserrat' }}>
+            Life at Our Countryside Resort
+          </h2>
+          <p className="text-lg max-w-3xl mx-auto text-[#555] mb-10" style={{ fontFamily: 'Montserrat' }}>
+            Residents enjoy engaging activities like art, music, gardening, and gentle fitness — all designed to stimulate memory and encourage social connection.
+          </p>
+          <Link href="/activities-calendar">
+            <button className="bg-[#3b5d7d] text-white px-6 py-3 rounded hover:bg-[#2d4a65] transition">
+              View Calendar
+            </button>
+          </Link>
+        </div>
+      </section>
+
+      {/* Final Call to Action */}
+      <section className="py-16 px-6 text-center bg-white">
+        <h2 className="text-3xl font-semibold mb-4 text-[#3b5d7d]" style={{ fontFamily: 'Montserrat' }}>
+          Ready to Experience the Difference?
+        </h2>
+        <p className="text-lg text-[#7a7a7a] max-w-xl mx-auto mb-8" style={{ fontFamily: 'Montserrat' }}>
+          Contact us today to schedule a tour or learn more about our exceptional memory care services.
+        </p>
+        <div className="flex justify-center gap-4 flex-wrap">
+          <Link href="/schedule-tour">
+            <button className="bg-[#3b5d7d] text-white px-6 py-3 rounded hover:bg-[#2d4a65] transition">
+              Schedule a Tour
+            </button>
+          </Link>
+          <Link href="/contact">
+            <button className="bg-[#b85042] text-white px-6 py-3 rounded hover:bg-[#a33f35] transition">
+              Contact Us
+            </button>
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
