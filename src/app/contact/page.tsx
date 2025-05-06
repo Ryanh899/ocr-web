@@ -74,7 +74,7 @@ export default function ContactPage() {
               Contact Us
             </h1>
             <p className="text-lg text-[#555] font-montserrat">
-              We’re here to answer your questions and help guide your next step with care and clarity.
+              We are here here to answer your questions and help guide your next step with care and clarity.
             </p>
           </section>
 
@@ -86,7 +86,7 @@ export default function ContactPage() {
                   Thank you!
                 </h2>
                 <p className="mb-6 font-montserrat">
-                  Your message has been sent successfully. We'll be in touch shortly.
+                  Your message has been sent successfully. We will be in touch shortly.
                 </p>
                 <Link href="/">
                   <button className="bg-[#3b5d7d] text-white px-6 py-3 rounded hover:bg-[#2d4a65] transition">
