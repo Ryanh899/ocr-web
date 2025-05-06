@@ -98,7 +98,7 @@ export default function HomePage() {
             <div>
               <article className="bg-white p-6 rounded shadow">
                 <h3 className="text-xl font-medium mb-3" style={{ fontFamily: 'Montserrat' }}>
-                  "Our mission is to provide compassionate, dignified care that honors the individuality of each resident."
+                &quot;Our mission is to provide compassionate, dignified care that honors the individuality of each resident.&quot;
                 </h3>
                 <p className="text-md text-[#7a7a7a] italic">
                   – Robert Ramos, Founder & Owner

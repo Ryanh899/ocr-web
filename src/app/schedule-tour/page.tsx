@@ -36,7 +36,7 @@ export default function ScheduleTourPage() {
             Schedule a Tour
           </h1>
           <p className="text-lg text-[#555]" style={{ fontFamily: 'Montserrat' }}>
-            We'd love to meet you! Complete the form below and we'll reach out to confirm your visit.
+            We&apos;d love to meet you! Complete the form below and we'll reach out to confirm your visit.
           </p>
         </section>
 
@@ -48,7 +48,7 @@ export default function ScheduleTourPage() {
                 Thank you!
               </h2>
               <p className="mb-6" style={{ fontFamily: 'Montserrat' }}>
-                Your tour request has been received. We'll reach out shortly to confirm the details.
+                Your tour request has been received. We&apos;ll reach out shortly to confirm the details.
               </p>
               <Link href="/">
                 <button className="bg-[#3b5d7d] text-white px-6 py-3 rounded hover:bg-[#2d4a65] transition">
@@ -137,7 +137,7 @@ export default function ScheduleTourPage() {
             Have Questions First?
           </h2>
           <p className="text-md text-[#555] mb-6" style={{ fontFamily: 'Montserrat' }}>
-            Feel free to reach out before booking — we’re happy to talk with you.
+            Feel free to reach out before booking — we&apos;re happy to talk with you.
           </p>
           <Link href="/contact">
             <button className="bg-[#b85042] text-white px-6 py-3 rounded hover:bg-[#a33f35] transition">

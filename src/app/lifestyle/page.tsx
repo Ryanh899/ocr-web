@@ -92,7 +92,7 @@ export default function LifestylePage() {
               </h3>
               <p className="text-md text-[#555]" style={{ fontFamily: 'Montserrat' }}>
                 Social bonds and community involvement are at the heart of our lifestyle. From birthday celebrations and
-                themed events to family gatherings and outings, there's always something special to look forward to.
+                themed events to family gatherings and outings, there&apos;s always something special to look forward to.
               </p>
             </div>
             <div className="bg-[#f0f4f8] rounded-lg shadow p-6">
