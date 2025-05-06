@@ -36,7 +36,7 @@ export default function ScheduleTourPage() {
             Schedule a Tour
           </h1>
           <p className="text-lg text-[#555]" style={{ fontFamily: 'Montserrat' }}>
-            We&apos;d love to meet you! Complete the form below and we'll reach out to confirm your visit.
+            We&apos;d love to meet you! Complete the form below and we&apos;ll reach out to confirm your visit.
           </p>
         </section>
 
