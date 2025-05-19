@@ -62,7 +62,7 @@ export default function AboutPage() {
             </div>
             <div>
               <img
-                src="/staff2.heic"
+                src="/staff.jpeg"
                 alt="Our caring memory care staff and resident sharing a moment"
                 className="w-full rounded shadow"
               />
