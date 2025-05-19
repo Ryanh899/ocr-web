@@ -141,7 +141,7 @@ export default function HomePage() {
               Residents enjoy engaging activities like art, music, and social interactions — all designed to stimulate memory and encourage social connection.
             </p>
             <button
-              onClick={() => setShowCalendar(true)}
+              // onClick={() => setShowCalendar(true)}
               className="bg-[#3b5d7d] text-white px-6 py-3 rounded hover:bg-[#2d4a65] transition"
             >
               View Calendar

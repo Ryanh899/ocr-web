@@ -46,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="canonical" href="https://ourcountrysideresort.com" />
         <link rel="icon" href="/favicon.ico" />
+        <title>Our Countryside Resort | Memory Care & Assisted Living</title>
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
@@ -112,13 +113,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
 
         {/* Page content */}
-        <main className="relative z-10">{children}</main>
-
+        <div id="__next">
+          <main role="main" className="relative z-10">{children}</main>
+        </div>
         {/* Footer */}
         <footer role="contentinfo" className="bg-[#f0f4f8] text-[#3b5d7d] py-10">
           <div className="max-w-6xl mx-auto px-6 text-center space-y-4" style={{ fontFamily: 'Montserrat' }}>
             <p>© {new Date().getFullYear()} Our Countryside Resort. All rights reserved.</p>
-            <p>18111 Haines St Perris, CA 92570 || License #336406991 || (951) 657-3557</p>
+            <p>18111 Haines St Perris, CA 92570 || CA RCFE License #336406991 || (951) 657-3557</p>
+            <p className="text-sm text-[#7a7a7a]">
+              <Link href="/privacy-policy" className="underline hover:text-[#2b4d6d]">
+                Privacy Policy
+              </Link>
+            </p>
             <p className="text-sm text-[#7a7a7a]">Compassionate Assisted Living in the Countryside</p>
           </div>
         </footer>

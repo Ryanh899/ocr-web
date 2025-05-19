@@ -81,7 +81,7 @@ export default function ContactPage() {
           {/* Contact Form */}
           <section className="bg-[#f9f9f9] rounded-lg shadow p-8 mb-12" aria-labelledby="contact-form-heading">
             {status === 'success' ? (
-              <div className="text-center">
+              <div role="status" aria-live="polite" className="text-center">
                 <h2 className="text-2xl font-semibold mb-4 text-green-700 font-montserrat">
                   Thank you!
                 </h2>
@@ -138,6 +138,12 @@ export default function ContactPage() {
                     className="w-full px-4 py-2 border border-gray-300 rounded"
                     placeholder="How can we help you?"
                   />
+                </div>
+                <div className="text-sm text-[#7a7a7a] mt-4">
+                  By submitting this form, you agree to our{' '}
+                  <Link href="/privacy-policy" className="underline text-[#3b5d7d] hover:text-[#2b4d6d]">
+                    Privacy Policy
+                  </Link>.
                 </div>
                 {status === 'error' && (
                   <p className="text-red-500 font-montserrat">

@@ -43,7 +43,7 @@ export default function ScheduleTourPage() {
         {/* Form or Success Message */}
         <section className="bg-[#f9f9f9] rounded-lg shadow p-8 mb-12">
           {status === 'success' ? (
-            <div className="text-center">
+            <div role="status" aria-live="polite" className="text-center">
               <h2 className="text-2xl font-semibold mb-4 text-green-700" style={{ fontFamily: 'Montserrat' }}>
                 Thank you!
               </h2>
@@ -115,6 +115,12 @@ export default function ScheduleTourPage() {
                   placeholder="Let us know anything helpful before your visit..."
                 />
               </div>
+              <div className="text-sm text-[#7a7a7a] mt-4">
+                  By submitting this form, you agree to our{' '}
+                  <Link href="/privacy-policy" className="underline text-[#3b5d7d] hover:text-[#2b4d6d]">
+                    Privacy Policy
+                  </Link>.
+                </div>
               {status === 'error' && (
                 <p className="text-red-500" style={{ fontFamily: 'Montserrat' }}>
                   Something went wrong. Please try again later.
