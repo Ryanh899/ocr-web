@@ -29,11 +29,11 @@ export default function PrivacyPolicy() {
         <h2 className="text-2xl font-semibold mt-8 mb-3">Third-Party Services</h2>
         <p className="mb-4">
           We use Formspree to securely handle form submissions on this website. Information you submit through our forms
-          is transmitted securely and handled in accordance with Formspree’s privacy practices. We do not sell, rent, or
+          is transmitted securely and handled in accordance with Formspree&apos;s privacy practices. We do not sell, rent, or
           share your personal information with any other third parties.
         </p>
   
-        <h2 className="text-2xl font-semibold mt-8 mb-3">Children's Privacy</h2>
+        <h2 className="text-2xl font-semibold mt-8 mb-3">Children&apos;s Privacy</h2>
         <p className="mb-4">
           We do not knowingly collect personal information from children under 13 years of age. If we become aware that
           we have collected such information without verified parental consent, we will delete it as soon as possible.
@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
   
         <h2 className="text-2xl font-semibold mt-8 mb-3">Your Rights and Choices</h2>
         <p className="mb-4">
-          If you wish to review, correct, or delete the personal information you’ve submitted to us, you may contact us
+          If you wish to review, correct, or delete the personal information you&apos;ve submitted to us, you may contact us
           at <a href="mailto:info@ourcountrysideresort.com" className="underline text-[#3b5d7d]">ocr.memorycare@gmail.com</a>.
         </p>
   
