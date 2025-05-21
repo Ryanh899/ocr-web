@@ -1,6 +1,7 @@
 "use client";
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function AboutPage() {
   return (
@@ -61,10 +62,19 @@ export default function AboutPage() {
               </p>
             </div>
             <div>
-              <img
+              {/* <img
                 src="/staff2.jpeg"
                 alt="Our caring memory care staff and resident sharing a moment"
                 className="w-full rounded shadow"
+              /> */}
+              <Image
+                src="/staff2.jpeg"
+                alt="Our caring memory care staff sharing a moment"
+                className="w-full rounded shadow"
+                // width={600}
+                // height={400}
+                priority // optional: load this image first (for above-the-fold)
+                quality={75} // optional: lower quality for faster load, default is 75
               />
             </div>
           </section>
