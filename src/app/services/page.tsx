@@ -1,6 +1,7 @@
 "use client";
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function ServicesAmenitiesPage() {
   return (
@@ -63,10 +64,17 @@ export default function ServicesAmenitiesPage() {
               </p>
             </div>
             <div>
-              <img
+              {/* <img
                 src="/entroom5.jpeg"
                 alt="Overview of Our Countryside Resort's services and amenities, showcasing a welcoming environment"
                 className="w-full rounded shadow"
+              /> */}
+              <Image
+                src="/entroom5.jpeg"
+                alt="Overview of Our Countryside Resort's services and amenities, showcasing a welcoming environment"
+                className="w-full rounded shadow"
+                priority 
+                quality={75} 
               />
             </div>
           </section>

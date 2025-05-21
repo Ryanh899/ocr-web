@@ -1,6 +1,7 @@
 "use client";
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function LifestylePage() {
   return (
@@ -64,10 +65,16 @@ export default function LifestylePage() {
               </p>
             </div>
             <div>
-              <img
+              {/* <img
                 src="/frontsign.jpeg"
                 alt="Residents enjoying daily activities in a warm community setting at Our Countryside Resort"
                 className="w-full rounded shadow"
+              /> */}
+              <Image
+                src="/frontsign.jpeg"
+                alt="Residents enjoying daily activities in a warm community setting at Our Countryside Resort"                className="w-full rounded shadow"
+                priority
+                quality={75}
               />
             </div>
           </section>
