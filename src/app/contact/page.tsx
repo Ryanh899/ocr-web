@@ -169,7 +169,8 @@ export default function ContactPage() {
               📞 <strong>Phone:</strong> (951) 657-3557
             </p>
             <p className="text-md text-[#555] mb-2 font-montserrat">
-              📧 <strong>Email:</strong> ocr.memorycare@gmail.com
+              {/* 📧 <strong>Email:</strong> ocr.memorycare@gmail.com */}
+              📧 <strong>Email:</strong> garlynco@msn.com
             </p>
             <p className="text-md text-[#555] mb-8 font-montserrat">
               📍 <strong>Address:</strong> 18111 Haines St, Perris, CA 92570

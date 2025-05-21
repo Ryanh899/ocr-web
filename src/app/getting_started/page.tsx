@@ -66,7 +66,7 @@ export default function GettingStartedPage() {
     },
     dining: {
       name: 'Dining Room',
-      img: '/entroom2.jpeg',
+      img: '/dining-room1.jpeg',
     },
   };
 
